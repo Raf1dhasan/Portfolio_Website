@@ -46,12 +46,12 @@ This portfolio was created to:
 ## 🖼️ Screenshots
 
 ### Home Page
-<img src="screenshot-home.png" alt="Home Page" width="600">
+<img src="web-ss1" alt="Home Page" width="600">
 
 ### Projects Section
-<img src="screenshot-projects.png" alt="Projects Section" width="600">
+<img src="web-ss2" alt="Projects Section" width="600">
 
-*(Replace `screenshot-home.png` and `screenshot-projects.png` with the actual image files.)*
+
 
 ---
 
@@ -60,8 +60,8 @@ This portfolio was created to:
 If you'd like to get in touch or learn more, feel free to reach out:
 
 - **Email**: rafidhasan202@gmail.com
-- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/)
-- **GitHub**: [GitHub Profile](https://github.com/Raf1dhasan)
+- **LinkedIn**: www.linkedin.com/in/-rafidhasan
+- **GitHub**: https://github.com/Raf1dhasan
 
 ---
 

@@ -46,10 +46,10 @@ This portfolio was created to:
 ## 🖼️ Screenshots
 
 ### Home Page
-<img src="web-ss1" alt="Home Page" width="600">
+<img src="web-ss1.png" alt="Home Page" width="600">
 
 ### Projects Section
-<img src="web-ss2" alt="Projects Section" width="600">
+<img src="web-ss2.png" alt="Projects Section" width="600">
 
 
 

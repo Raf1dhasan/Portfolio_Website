@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafid Hasan - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 60vh;
+            background: #0f172a;
+            z-index: -1;
+        }
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 6px 14px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        nav ul {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li a {
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #E11D48;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+        padding: 10px 0;
+    }
+}
+        
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 60vh;
+            text-align: center;
+            color: white;
+        }
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            color: white;
+            margin-top: 15px;
+        }
+        .hero-section h2 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 8px 0;
+            letter-spacing: 0.1em;
+            color: #E11D48;
+            text-transform: uppercase;
+        }
+        .hero-section p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #9CA3AF;
+        }
+
+        @media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem; /* Scale down */
+    }
+
+    .hero-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .profile-image {
+        width: 100px; /* Smaller profile image */
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+
+    .profile-image {
+        width: 80px; /* Further scaling */
+        height: 80px;
+    }
+}
+
+
+
+
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+            border: 3px solid #E11D48;
+        }
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .social-links {
+            margin-top: 15px;
+        }
+        
+        .social-links {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    align-items: center; /* Align them vertically */
+    gap: 16px; /* Add consistent spacing between buttons */
+    margin-top: 15px;
+}
+
+/* General Button Styling */
+.social-links a.btn {
+    display: inline-flex;
+    align-items: center; /* Align icon and text vertically */
+    justify-content: center; /* Center content in the button */
+    padding: 15px 25px; /* Consistent padding */
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    background-color: #0f172a; /* Default background color */
+    border: 2px solid white;
+    border-radius: 50px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    line-height: 1; /* Prevent extra spacing caused by line height */
+}
+
+.social-links a.btn img.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Space between icon and text */
+    vertical-align: middle; /* Align icon to middle */
+}
+
+.social-links a.btn:hover {
+    background-color: white;
+    color: #0f172a;
+    transform: scale(1.05); /* Subtle hover effect */
+}
+       
+       /* LinkedIn Button Specific Styling */
+.social-links a.btn-linkedin {
+    background-color: white; /* White background for LinkedIn button */
+    color: #0f172a; /* Dark text for contrast */
+}
+
+.social-links a.btn-linkedin:hover {
+    background-color: #0f172a; /* Dark background on hover */
+    color: white; /* White text on hover */
+}
+       
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .projects {
+            background: white;
+            color: #0f172a;
+        }
+        .projects h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        .project-card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #F3F4F6;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 70%;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            background-color: #E5E7EB;
+        }
+        .project-card .description {
+            flex: 1;
+            text-align: left;
+            padding-right: 20px;
+            margin-left: 20px; /* Added margin to create space from the left border */
+        }
+        .project-card .description h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .project-card .description .tech-used {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .project-card .description .tech-used img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+        .project-card .description p {
+            color: #6B7280;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        .project-card .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .project-card .buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            color: #fff;
+            background-color: #0f172a;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .project-card .buttons a:hover {
+            background-color: #E11D48;
+        }
+        .project-card .image {
+            flex: 1;
+            text-align: right;
+        }
+        .project-card .image img {
+            width: 95%;
+            max-width: 500px;
+            border-radius: 12px;
+            margin-bottom: -20px;
+            margin-right: -20px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .project-card .image img:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card .description, 
+    .project-card .image {
+        width: 100%; /* Full width for both sections */
+        text-align: center;
+    }
+
+    .project-card .image img {
+        margin: 10px auto; /* Center image */
+        max-width: 100%; /* Fit within screen */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column; /* Stack items */
+        align-items: center; /* Center align */
+    }
+
+    .timeline-content, 
+    .timeline-date {
+        width: 100%; /* Full width */
+        text-align: center; /* Center text */
+    }
+
+    .timeline-icon {
+        margin: 15px 0;
+    }
+}
+
+
+.skills-section img {
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+            animation: bounceIn 1s ease;
+        }
+        .skills-section {
+            text-align: center;
+            padding: 40px;
+        }
+        .skills-section h2 {
+            font-size: 7rem;
+            margin-bottom: 20px;
+        }
+
+        /* General Button Styling */
+.project-card .buttons a.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0f172a;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-card .buttons a.btn img.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px; /* Add space between icon and text */
+    vertical-align: middle;
+}
+
+.project-card .buttons a.btn:hover {
+    background-color: #E11D48;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .education-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .education-logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .education-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .education-info h4 {
+        font-size: 1.2rem;
+    }
+
+    .education-info p {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 768px) {
+    .contact-details ul {
+        font-size: 0.9rem;
+    }
+
+    .contact-details li {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align to start */
+    }
+
+    .contact-details a {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-details li {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+        .skills-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for all rows */
+    gap: 20px; /* Adds consistent spacing between items */
+    width: 55%; /* Restricts the container width to 55% of the page */
+    margin: 0 auto; /* Centers the container on the page */
+    justify-items: center; /* Centers items inside each cell */
+}
+
+.skill:nth-child(15) {
+    grid-column-start: 2; /* Starts the third row at column 2 for proper centering */
+}
+.skill:nth-child(16) {
+    grid-column-start: 3; /* Ensures consistent spacing for items in the third row */
+}
+.skill:nth-child(17) {
+    grid-column-start: 4;
+}
+.skill:nth-child(18) {
+    grid-column-start: 5;
+}
+.skill:nth-child(19) {
+    grid-column-start: 6;
+}
+        .skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+        .skill img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+        .skill img:hover {
+            transform: scale(1.2);
+        }
+        .skill span {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+        gap: 10px;
+    }
+
+    .skill img {
+        width: 60px; /* Smaller icons */
+        height: 60px;
+    }
+
+    .skill span {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns layout for very small screens */
+    }
+}
+
+
+
+
+
+        @keyframes bounceIn {
+            0% {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            50% {
+                transform: translateY(-10px);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .experience {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .experience h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="profile-image">
+            <img src="i7.png" alt="Rafid Hasan">
+        </div>
+        <h2>Hello, World.</h2>
+        <h1>I'm Rafid Hasan.</h1>
+        <p>Software Engineer | Front End & App Developer</p>
+        <div class="social-links">
+            <a href="https://github.com/Raf1dhasan" target="_blank" class="btn">
+                <img src="github_11376339.png" alt="GitHub Icon" class="icon">
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/-rafidhasan" target="_blank" class="btn btn-linkedin">
+                <img src="linkedin_1384014.png" alt="LinkedIn Icon" class="icon">
+                LinkedIn
+            </a>
+        </div>
+        
+    </section>
+
+    <!-- Projects Section -->
+<section class="projects" id="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-card">
+        <div class="description">
+            <h3>Rent Connect Mobile App</h3>
+            <div class="tech-used">
+                <span>Made with:</span>
+                <img src="Logo_android.png" alt="Tech 1">
+                <img src="Logo_java.png" alt="Tech 2">
+                <img src="Logo_xml.png" alt="Tech 3">
+                <img src="firebase.png" alt="Tech 4">
+            </div>
+            <p>The Rent Connect App is a mobile application designed to simplify the rental process for property owners and renters. It features advanced search filters, secure user authentication, and intuitive property management tools. Renters can explore detailed property listings, while owners can manage their properties with ease.
+
+                Published on Google Play Store! Check it out by visiting the GitHub repository for the link.</p>
+            <div class="buttons">
+                <a href="#" target="_blank" class="btn">
+                    <img src="youtube_1384060.png" alt="YouTube Icon" class="icon">
+                    Demo
+                </a>
+                <a href="https://github.com/Raf1dhasan/RentConnect_App" target="_blank" class="btn">
+                    <img src="github_11376339.png" alt="GitHub Icon" class="icon">
+                    GitHub
+                </a>
+            </div>
+        </div>
+        <div class="image">
+            <img src="rent1.jpg" alt="Rent Connect App Screenshot">
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="description">
+            <h3>Rent Connect Website</h3>
+            <div class="tech-used">
+                <span>Made with:</span>
+                <img src="html.png" alt="Tech 1">
+                <img src="php.png" alt="Tech 2">
+                <img src="javascipt.png" alt="Tech 3">
+                <img src="bootstrap.png" alt="Tech 4">
+            </div>
+            <p>The Rent Connect Web project is a web application designed to connect renters and property owners seamlessly. This platform allows users to search for rental properties, manage listings, and streamline the renting process through a user-friendly interface.</p>
+            <div class="buttons">
+                <a href="https://www.youtube.com/watch?v=kcyiYOpQhHA" target="_blank" class="btn">
+                    <img src="youtube_1384060.png" alt="YouTube Icon" class="icon">
+                    Demo
+                </a>
+                <a href="https://github.com/Raf1dhasan/RentConnect_website" target="_blank" class="btn">
+                    <img src="github_11376339.png" alt="GitHub Icon" class="icon">
+                    GitHub
+                </a>
+            </div>
+        </div>
+        <div class="image">
+            <img src="sss2.png" alt="Rent Connect Website Screenshot">
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="description">
+            <h3>University Network Topology</h3>
+            <div class="tech-used">
+                <span>Made with:</span>
+                <img src="cisco.png" alt="Tech 1">
+            </div>
+            <p>This repository contains the University Network Topology project, designed using Cisco Packet Tracer. The topology represents a comprehensive network infrastructure for a university, including various buildings and functionalities such as Wi-Fi, routers, and server configurations.</p>
+            <div class="buttons">
+                <a href="https://github.com/Raf1dhasan/University-Network-Topology" target="_blank" class="btn">
+                    <img src="github_11376339.png" alt="GitHub Icon" class="icon">
+                    GitHub
+                </a>
+            </div>
+        </div>
+        <div class="image">
+            <img src="ss5.png" alt="University Network Topology Screenshot">
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="description">
+            <h3>TopNotchKamloops.ca</h3>
+            <div class="tech-used">
+                <span>Made with:</span>
+                <img src="html.png" alt="Tech 1">
+                <img src="css.png" alt="Tech 2">
+                <img src="php.png" alt="Tech 3">
+            </div>
+            <p>Website developed and managed for topnotchkamloops.ca, providing property solutions and cleaning services. This project showcases my skills in web development, design, and ongoing management. Built to ensure seamless user experience and functionality.</p>
+            <div class="buttons">
+                <a href="https://youtu.be/elSdfazX2sY" target="_blank" class="btn">
+                    <img src="youtube_1384060.png" alt="YouTube Icon" class="icon">
+                    Demo
+                </a>
+                <a href="https://github.com/Raf1dhasan/TopNotchKamloops.ca" target="_blank" class="btn">
+                    <img src="github_11376339.png" alt="GitHub Icon" class="icon">
+                    GitHub
+                </a>
+            </div>
+        </div>
+        <div class="image">
+            <img src="top-notch-ss-1.png" alt="TopNotchKamloops.ca Screenshot">
+        </div>
+    </div>
+</section>
+
+
+    <section class="skills" id="skills">
+        <h2 style="font-size: 2.5rem; margin-bottom: 30px;">My Skills</h2>
+        <div class="skills-container">
+            <!-- First Row: 7 Items -->
+            <div class="skill">
+                <img src="javascipt.png" alt="JavaScript">
+                <span>JavaScript</span>
+            </div>
+            <div class="skill">
+                <img src="Logo_java.png" alt="Java">
+                <span>Java</span>
+            </div>
+            <div class="skill">
+                <img src="c++.png" alt="C++">
+                <span>C++</span>
+            </div>
+            <div class="skill">
+                <img src="html.png" alt="HTML">
+                <span>HTML</span>
+            </div>
+            <div class="skill">
+                <img src="php.png" alt="PHP">
+                <span>PHP</span>
+            </div>
+            <div class="skill">
+                <img src="mysql.png" alt="MySQL">
+                <span>MySQL</span>
+            </div>
+            <div class="skill">
+                <img src="python.png" alt="Python">
+                <span>Python</span>
+            </div>
+    
+            <!-- Second Row: 7 Items -->
+            <div class="skill">
+                <img src="Logo_android.png" alt="Android">
+                <span>Android</span>
+            </div>
+            <div class="skill">
+                <img src="css.png" alt="CSS">
+                <span>CSS</span>
+            </div>
+            <div class="skill">
+                <img src="firebase.png" alt="React">
+                <span>Firebase</span>
+            </div>
+            <div class="skill">
+                <img src="bootstrap.png" alt="Node.js">
+                <span>Bootstrap</span>
+            </div>
+            <div class="skill">
+                <img src="cisco.png" alt="Firebase">
+                <span>Cisco</span>
+            </div>
+            <div class="skill">
+                <img src="c-sharp.png" alt="TypeScript">
+                <span>C#</span>
+            </div>
+            <div class="skill">
+                <img src="Logo_xml.png" alt="Docker">
+                <span>XML</span>
+            </div>
+    
+            <!-- Third Row: 5 Items -->
+            <div class="skill">
+                <img src="adobe-illustrator.png" alt="AWS">
+                <span>Adobe Illustrator</span>
+            </div>
+            <div class="skill">
+                <img src="c.png" alt="GraphQL">
+                <span>C</span>
+            </div>
+            <div class="skill">
+                <img src="jquery.png" alt="Kubernetes">
+                <span>jQuery</span>
+            </div>
+            <div class="skill">
+                <img src="git.png" alt="Git">
+                <span>Git</span>
+            </div>
+            <div class="skill">
+                <img src="linux.png" alt="Linux">
+                <span>Linux</span>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Experience Section -->
+<!-- Experience Section -->
+<section class="experience" id="experience">
+    <h2>My Experience</h2>
+    <div class="timeline">
+        <!-- Experience Block 1 -->
+        <div class="timeline-item horizontal">
+            <div class="timeline-date" style="align-self: flex-start;">
+                <p><br>May 2024 - Present</p>
+            </div>
+            <div class="timeline-icon" style="align-self: flex-start;">
+                <img src="reformedtech_ca_logo.jpeg" alt="Web Developer Icon">
+            </div>
+            <div class="timeline-content right">
+                <h3>Web Developer</h3>
+                <h4>ReformedTech.ca - Contract</h4>
+                <ul>
+                    <li>Collaborated with senior developers to design and enhance website layouts, ensuring responsive and user-friendly designs.</li>
+                    <li>Assisted in creating visual elements and maintaining consistency with brand identity across multiple web platforms.</li>
+                    <li>Worked on improving website functionality, optimizing load times, and ensuring compatibility across different browsers and devices.</li>
+                    <li>Gained hands-on experience with various design tools and coding languages, including HTML, CSS, and JavaScript, while contributing to client meetings and project presentations.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Experience Block 2 -->
+        <div class="timeline-item horizontal">
+            <div class="timeline-date" style="align-self: flex-start;">
+                <p><br>Nov 2024 - Dec 2024</p>
+            </div>
+            <div class="timeline-icon" style="align-self: flex-start;">
+                <img src="topnt1.png" alt="Website Developer Icon">
+            </div>
+            <div class="timeline-content right">
+                <h3>Website Developer</h3>
+                <h4>topnotchkamloops.ca - Freelance</h4>
+                <ul>
+                    <li>Designed, developed, and launched the website topnotchkamloops.ca to enhance the organization's online presence.</li>
+                    <li>Implemented a user-friendly interface with responsive design, ensuring optimal performance across all devices (desktop, tablet, and mobile).</li>
+                    <li>Managed website content, including text, images, and multimedia, to maintain relevance and engagement.</li>
+                    <li>Monitored site performance, SEO (Search Engine Optimization), and analytics to increase traffic and user interaction.</li>
+                    <li>Addressed technical issues, ensuring site uptime, security, and functionality.</li>
+                    <li>Integrated third-party tools and plugins to improve website features such as contact forms, navigation, and user experience.</li>
+                    <li>Conducted regular updates, backups, and security checks to protect against vulnerabilities.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Experience Block 3 -->
+        <div class="timeline-item horizontal">
+            <div class="timeline-date" style="align-self: flex-start;">
+                <p><br>July 2024 - August 2024</p>
+            </div>
+            <div class="timeline-icon" style="align-self: flex-start;">
+                <img src="logo-text.png" alt="IT Intern Icon">
+            </div>
+            <div class="timeline-content right">
+                <h3>IT Intern</h3>
+                <h4>Mississauga Community Legal Services</h4>
+                <ul>
+                    <li>Analyzed data from CRM systems using Microsoft Dynamics to improve operational efficiency.</li>
+                    <li>Assisted in implementing SIP phone systems for seamless communication.</li>
+                    <li>Supported access to justice for low-income individuals through technical system optimization.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* General Experience Section Styling */
+.experience {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.experience h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Timeline Styling */
+.timeline {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start; /* Align items to start for higher placement */
+    justify-content: space-between;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline-item.horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to start for higher placement */
+    flex-direction: row;
+    gap: 10px; /* Tighter spacing between components */
+}
+
+.timeline-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 70%; /* Details section width */
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0f172a;
+}
+
+.timeline-content h4 {
+    font-size: 1.2rem;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.timeline-content ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    margin: 10px 0 0;
+}
+
+.timeline-content ul li {
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Timeline Icon Styling */
+.timeline-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: white;
+    border: 3px solid #e11d48;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Timeline Date Styling */
+.timeline-date {
+    width: 15%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 500;
+    margin: 0 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline-date:hover {
+    transform: scale(1.03);
+}
+
+/* Hover Effects */
+.timeline-item:hover {
+    transform: scale(1.03);
+}
+
+.timeline-content:hover,
+.timeline-icon:hover {
+    transform: scale(1.03);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+    }
+    .timeline-item.horizontal {
+        flex-direction: column;
+        align-items: center;
+    }
+    .timeline-content,
+    .timeline-date {
+        width: 100%;
+        text-align: center;
+    }
+    .timeline-icon {
+        margin: 15px 0;
+    }
+}
+</style>
+
+    
+
+ <!-- Education Section -->
+<section class="education" id="education">
+    <h2>My Education</h2>
+    <div class="education-details">
+        <div class="education-card">
+            <div class="education-header">
+                <div class="education-logo">
+                    <img src="logo_tru.png" alt="Thompson Rivers University Logo">
+                </div>
+                <div class="education-info">
+                    <h3>4th Year Bachelor’s Student</h3>
+                    <h4>Computing Science</h4>
+                    <h4>Thompson Rivers University</h4>
+                    <p><strong>Duration:</strong> Jan 2022 - Dec 2025</p>
+                    <p><strong>Dean’s List:</strong> Winter 2022, Fall 2023, Winter 2024</p>
+                    <p><strong>GPA:</strong> 3.5</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Education Section Styling */
+.education {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.education h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #0f172a;
+}
+
+.education-details {
+    max-width: 850px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.education-details:hover {
+    transform: scale(1.05);
+}
+
+.education-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.education-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.education-logo img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.education-logo img:hover {
+    transform: scale(1.1);
+}
+
+.education-info {
+    text-align: left;
+}
+
+.education-info h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e11d48;
+    margin-bottom: 5px;
+}
+
+.education-info h4 {
+    font-size: 1.5rem;
+    color: #6b7280;
+    margin-bottom: 5px;
+}
+
+.education-info p {
+    font-size: 1rem;
+    color: #374151;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .education-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .education-logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .education-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .education-info h4 {
+        font-size: 1.2rem;
+    }
+
+    .education-info p {
+        font-size: 0.9rem;
+    }
+}
+
+
+</style>
+
+
+
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-details">
+        <ul>
+            <li>
+                <span class="contact-label">LinkedIn:</span>
+                <a href="https://www.linkedin.com/in/-rafidhasan" target="_blank">
+                    <img src="social_13670350.png" alt="LinkedIn" class="icon">
+                    www.linkedin.com/in/-rafidhasan
+                </a>
+            </li>
+            <li>
+                <span class="contact-label">GitHub:</span>
+                <a href="https://github.com/Raf1dhasan" target="_blank">
+                    <img src="github_11376339.png" alt="GitHub" class="icon">
+                    https://github.com/Raf1dhasan
+                </a>
+            </li>
+            <li>
+                <span class="contact-label">Email:</span>
+                <a href="mailto:rafidhasan202@gmail.com">
+                    <img src="gmail_5968534.png" alt="Email" class="icon">
+                    rafidhasan202@gmail.com
+                </a>
+            </li>
+            <li>
+                <span class="contact-label">Website:</span>
+                <a href="https://rafidhasan.com" target="_blank">
+                    <img src="world-wide-web_1006771.png" alt="Website" class="icon">
+                    https://rafidhasan.com
+                </a>
+            </li>
+            <li>
+                <span class="contact-label">Phone:</span>
+                <a href="tel:+17782054626">
+                    <img src="phone-call_455705.png" alt="Phone" class="icon">
+                    +1 778-205-4626
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<style>
+/* Contact Section Styling */
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #0f172a;
+}
+
+.contact-details {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: left;
+}
+
+.contact-details ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-details li {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-details a {
+    text-decoration: none;
+    color: #374151;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-details a:hover {
+    color: #e11d48;
+    text-decoration: underline;
+}
+
+.contact-label {
+    font-weight: bold;
+    color: #0f172a;
+    min-width: 80px; /* Ensures labels align properly */
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-details {
+        padding: 15px;
+    }
+
+    .contact-details li {
+        font-size: 0.9rem;
+        flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    }
+
+    .contact-label {
+        min-width: 70px;
+    }
+
+    .icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Responsive Design for Screen Sizes Less Than 1024px */
+@media (max-width: 1024px) {
+    /* Adjust Navbar */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        top: 10px;
+        padding: 10px;
+    }
+
+    /* Hero Section */
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Social Links */
+    .social-links a.btn {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Design for Screen Sizes Less Than 768px */
+@media (max-width: 768px) {
+    /* Projects Section */
+    .project-card {
+        flex-direction: column;
+    }
+
+    .project-card .description,
+    .project-card .image {
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-card .image img {
+        margin: 0 auto;
+    }
+
+    /* Skills Section */
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .skill img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .skill span {
+        font-size: 0.8rem;
+    }
+}
+
+/* Responsive Design for Screen Sizes Less Than 480px */
+@media (max-width: 480px) {
+    /* General Font Scaling */
+    body {
+        font-size: 90%;
+    }
+
+    /* Hero Section */
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Contact Section */
+    .contact-details ul {
+        font-size: 0.8rem;
+    }
+
+    .contact-details li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-details a {
+        gap: 5px;
+    }
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Particles.js Configuration -->
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                       
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
